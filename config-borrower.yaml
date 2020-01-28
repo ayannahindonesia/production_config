@@ -1,0 +1,54 @@
+development:
+
+staging:
+
+production:
+  react_cors: true
+  passphrase: 7MFSQTSnRnCKkqzG
+  database:
+    table: borrower
+    username: asira_admin
+    password: Sky#crest88
+    host: postgres_db
+    port: "5432"
+    maxlifetime: 30
+    idle_conns: 10
+    open_conns: 100
+    sslmode: disable
+    logmode: false
+    timezone: Asia/Jakarta
+  kafka:
+    host: kafka
+    port: "9092"
+    user: asira_admin
+    pass: Sky#crest88
+    client_id: asira_borrower
+    sasl: true
+    log_verbose: false
+    group_id: asira
+    topics:
+      produces: asira_backend
+      consumes: asira_backend
+  jwt:
+    duration: 10080 # in minutes
+    jwt_secret: gLZziEPQvb684w8dL6nz
+  mailer:
+    host : smtp.gmail.com
+    port : 587
+    email : infra.ayannah@gmail.com 
+    password : jakarta2019
+  messaging:
+    key: clientkey
+    secret: clientsecret
+    url: http://asira.ayannah.com/api-messaging
+    client_auth: /clientauth
+    sms: /client/message_sms_send
+    push_notification: /client/message_notification_send
+    list_notification: /client/message_notification
+  s3:
+    debug_mode: 1
+    region: id-tbs
+    access_key: J2BYZXZ43VPZ27V4TCP3
+    secret_key: s0yHeS/eBvjmyshVckbNqVWnTKwhnaP6kYBpFBHk
+    host: https://bucket.cloud.lintasarta.co.id:8082
+    bucket_name: bucket-ayannah
