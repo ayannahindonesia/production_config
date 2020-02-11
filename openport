@@ -1,0 +1,3 @@
+Firewall allow lebih dari 1 ports : -A INPUT -p <TCP atau UDP> -m <TCP atau UDP> --tcp-flags FIN,SYN,RST,ACK SYN -m state --state NEW -m multiport --dports <PORT BARU 1, PORT BARU 2> -j ACCEPT
+
+Firewall allow 1 port : -A INPUT -p <TCP atau UDP> -m <TCP atau UDP> --tcp-flags FIN,SYN,RST,ACK SYN -m state --state NEW --dport <PORT BARU> -j ACCEPT
